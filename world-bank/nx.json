@@ -13,6 +13,18 @@
     },
     "informer": {
       "tags": []
+    },
+    "shared-domain": {
+      "tags": []
+    },
+    "models": {
+      "tags": []
+    },
+    "services": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }

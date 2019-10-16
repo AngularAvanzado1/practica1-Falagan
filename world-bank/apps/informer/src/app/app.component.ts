@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IHeaderData } from '@world-bank/models';
+import { Constans } from '../assets/constans';
 
 @Component({
   selector: 'wb-informer-root',
@@ -142,5 +144,6 @@ import { Component } from '@angular/core';
   ]
 })
 export class AppComponent {
+  public headerData: IHeaderData = Constans.HEADER_DATA;
   title = 'informer';
 }
