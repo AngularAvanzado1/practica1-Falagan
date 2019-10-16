@@ -1,0 +1,18 @@
+{
+  "npmScope": "world-bank",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "informer-e2e": {
+      "tags": []
+    },
+    "informer": {
+      "tags": []
+    }
+  }
+}

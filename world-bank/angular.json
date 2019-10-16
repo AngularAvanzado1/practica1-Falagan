@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "projects": {
+    "informer": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "inlineStyle": true
+        }
+      },
+      "root": "apps/informer",
+      "sourceRoot": "apps/informer/src",
+      "prefix": "wb-informer",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/informer",
+            "index": "apps/informer/src/index.html",
+            "main": "apps/informer/src/main.ts",
+            "polyfills": "apps/informer/src/polyfills.ts",
+            "tsConfig": "apps/informer/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/informer/src/favicon.ico",
+              "apps/informer/src/assets"
+            ],
+            "styles": ["apps/informer/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/informer/src/environments/environment.ts",
+                  "with": "apps/informer/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "informer:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "informer:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "informer:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/informer/tsconfig.app.json",
+              "apps/informer/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/informer/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/informer/jest.config.js",
+            "tsConfig": "apps/informer/tsconfig.spec.json",
+            "setupFile": "apps/informer/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "informer-e2e": {
+      "root": "apps/informer-e2e",
+      "sourceRoot": "apps/informer-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/informer-e2e/cypress.json",
+            "tsConfig": "apps/informer-e2e/tsconfig.e2e.json",
+            "devServerTarget": "informer:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "informer:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/informer-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/informer-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "informer"
+}
