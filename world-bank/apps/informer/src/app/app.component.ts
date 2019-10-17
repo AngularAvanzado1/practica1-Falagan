@@ -145,5 +145,5 @@ import { Constans } from '../assets/constans';
 })
 export class AppComponent {
   public headerData: IHeaderData = Constans.HEADER_DATA;
-  title = 'informer';
+  title = 'Informer';
 }

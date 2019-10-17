@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContinentalTableComponent } from './continental-table.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ContinentalTableComponent', () => {
   let component: ContinentalTableComponent;
@@ -8,7 +9,8 @@ describe('ContinentalTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContinentalTableComponent ]
+      declarations: [ ContinentalTableComponent ],
+      imports: [RouterTestingModule]
     })
     .compileComponents();
   }));
