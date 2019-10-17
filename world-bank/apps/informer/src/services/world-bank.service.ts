@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Region, Country } from '@world-bank/models';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class WorldBankService {
   constructor(private _httpClient: HttpClient) {}
 
-  public getContinentalRegions() {
+  public getContinentalRegions(){
     return this._httpClient
       .get<[]>('http://api.worldbank.org/v2/region/?format=json')
       .pipe(map(this.transformContinentalRegionsData));
@@ -33,7 +34,7 @@ export class WorldBankService {
     return countries;
   }
 
-  public getCountry(countryCode: string) {
+  public getCountry(countryCode: string){
     return this._httpClient
       .get<Country>(
         `http://api.worldbank.org/V2/country/${countryCode}?format=json`
@@ -42,8 +43,7 @@ export class WorldBankService {
   }
 
   private transformCountryData(infoCountry): Country {
-    const country: Country = infoCountry[1];
-    console.log(country);
+    const country: Country = infoCountry[1][0];
     return country;
   }
 }

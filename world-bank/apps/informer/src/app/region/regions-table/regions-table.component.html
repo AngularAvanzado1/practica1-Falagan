@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let country of data | async; let i = index">
+    <tr *ngFor="let country of data; let i = index">
       <th scope="row">{{ i }}</th>
       <td>{{ country.id }}</td>
       <td>

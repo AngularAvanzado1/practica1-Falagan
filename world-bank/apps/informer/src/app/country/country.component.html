@@ -8,75 +8,7 @@
   </div>
   <div class="row p-4">
     <div class="col-10 m-auto">
-      <div class="card">
-        <div class="card-header text-center">
-          Informacion del País
-        </div>
-        <div class="card-body">
-          <ng-container *ngFor="let info of country$ | async">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <h5 class="card-title">Región</h5>
-                <p class="card-text">Nombre: {{ info.region.value }}</p>
-                <p class="card-text">ID: {{ info.region.id }}</p>
-                <p class="card-text">IsoCode: {{ info.region.iso2code }}</p>
-              </li>
-              <li class="list-group-item">
-                <h5 class="card-title">Administración</h5>
-                <p class="card-text">Nombre: {{ info.adminregion.value }}</p>
-                <p class="card-text">ID: {{ info.adminregion.id }}</p>
-                <p class="card-text">
-                  IsoCode: {{ info.adminregion.iso2code }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h5 class="card-title">Ingresos</h5>
-                <p class="card-text">
-                  Valor: {{ info.incomeLevel.value }} ID:
-                  {{ info.incomeLevel.id }}
-                  IsoCode: {{ info.incomeLevel.iso2code }}
-                </p>
-                <p class="card-text">ID: {{ info.incomeLevel.id }}</p>
-                <p class="card-text">
-                  IsoCode: {{ info.incomeLevel.iso2code }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h5 class="card-title">Deuda</h5>
-                <p class="card-text">Valor: {{ info.lendingType.value }}</p>
-                <p class="card-text">ID: {{ info.lendingType.id }}</p>
-
-                <p class="card-text">
-                  IsoCode: {{ info.lendingType.iso2code }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h5 class="card-title">Capital</h5>
-                <p class="card-text">
-                  {{ info.capitalCity }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h5 class="card-title">Latitud</h5>
-                <p class="card-text">
-                  {{ info.longitude }}
-                </p>
-              </li>
-              <li class="list-group-item">
-                <h5 class="card-title">Longitud</h5>
-                <p class="card-text">
-                  {{ info.latitude }}
-                </p>
-              </li>
-            </ul>
-            <a
-              class="btn btn-primary mt-2 float-right"
-              [routerLink]="['/region', info.region.id, info.region.value]"
-              >Ir a región continental</a
-            >
-          </ng-container>
-        </div>
-      </div>
+    <wb-informer-contry-info [data]="country$ | async"></wb-informer-contry-info>
     </div>
   </div>
 </div>
