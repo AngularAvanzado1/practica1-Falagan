@@ -1,0 +1,22 @@
+<table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Code</th>
+            <th scope="col">IsoCode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let region of data | async; let i = index">
+            <th scope="row">{{ i }}</th>
+            <td>{{ region.id }}</td>
+            <td>
+              <a [routerLink]="['/region', region.code, region.name]">{{ region.name }}</a>
+            </td>
+            <td>{{ region.code }}</td>
+            <td>{{ region.iso2code }}</td>
+          </tr>
+        </tbody>
+      </table>
