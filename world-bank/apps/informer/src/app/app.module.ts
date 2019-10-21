@@ -10,6 +10,11 @@ import { HomeModule } from './home/home.module';
 import { RegionModule } from './region/region.module';
 import { CountryComponent } from './country/country.component';
 import { CountryModule } from './country/country.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { StoreRouterConnectingModule, RouterState, routerReducer } from '@ngrx/router-store';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,7 +31,24 @@ const routes: Routes = [
     HttpClientModule,
     HomeModule,
     RegionModule,
-    CountryModule
+    CountryModule,
+    StoreModule.forRoot(
+      {
+        router: routerReducer
+      },
+      {
+        metaReducers: !environment.production ? [] : [],
+        runtimeChecks: {
+          strictActionImmutability: true,
+          strictStateImmutability: true
+        }
+      }
+    ),
+    EffectsModule.forRoot([]),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    StoreRouterConnectingModule.forRoot({
+      routerState: RouterState.Minimal
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
