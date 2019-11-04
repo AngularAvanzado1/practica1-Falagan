@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
-import { WorldBankService } from '../../services/world-bank.service';
+import { WorldBankService } from '../../../services/world-bank.service';
 
 @Component({
   selector: 'wb-informer-region',

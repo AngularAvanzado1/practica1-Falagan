@@ -7,6 +7,9 @@ import { ContryInfoComponent } from './contry-info/contry-info.component';
 
 @NgModule({
   declarations: [CountryComponent, ContryInfoComponent],
+  exports: [
+    ContryInfoComponent
+  ],
   imports: [
     CommonModule,
     RouterModule

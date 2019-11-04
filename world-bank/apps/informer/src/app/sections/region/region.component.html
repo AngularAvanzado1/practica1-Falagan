@@ -1,14 +1,19 @@
 <div class="container-fluid">
   <div class="row p-4">
     <div class="col">
-      <hr />
+      <hr/>
       <h3 class="text-center">Region Continental de {{ regionName }}</h3>
-      <hr />
+      <hr/>
     </div>
   </div>
   <div class="row p-4">
     <div class="col">
-        <wb-informer-regions-table [data]="countries$ | async"></wb-informer-regions-table>
+      <wb-informer-regions-table [data]="countries$ | async">
+      </wb-informer-regions-table>
+      <a
+        class="btn btn-primary mt-2 float-right"
+        routerLink="/"
+      >Ir a home</a>
     </div>
   </div>
 </div>

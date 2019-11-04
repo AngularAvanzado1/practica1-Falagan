@@ -23,7 +23,8 @@
             "aot": false,
             "assets": [
               "apps/informer/src/favicon.ico",
-              "apps/informer/src/assets"
+              "apps/informer/src/assets",
+              "apps/informer/src/manifest.webmanifest"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -59,7 +60,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/informer/ngsw-config.json"
             }
           }
         },

@@ -5,9 +5,11 @@ import { RouterModule } from '@angular/router';
 import { RegionsTableComponent } from './regions-table/regions-table.component';
 
 
-
 @NgModule({
   declarations: [RegionComponent, RegionsTableComponent],
+  exports: [
+    RegionsTableComponent
+  ],
   imports: [
     CommonModule,
     RouterModule

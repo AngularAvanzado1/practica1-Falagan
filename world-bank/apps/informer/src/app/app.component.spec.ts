@@ -2,8 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { UiModule } from '@world-bank/ui';
-import { RegionModule } from './region/region.module';
-import { CountryModule } from './country/country.module';
+import { RegionModule } from './sections/region/region.module';
+import { CountryModule } from './sections/country/country.module';
 import { HomeModule } from './home/home.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 

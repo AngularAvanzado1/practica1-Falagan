@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Country } from '@world-bank/models';
 import { ActivatedRoute } from '@angular/router';
-import { WorldBankService } from '../../services/world-bank.service';
+import { WorldBankService } from '../../../services/world-bank.service';
 
 @Component({
   selector: 'wb-informer-country',
@@ -11,7 +11,7 @@ import { WorldBankService } from '../../services/world-bank.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CountryComponent implements OnInit {
-  public country$: Observable<Country>;
+  public country$: Observable<Country> = null;
   private countryCode: string;
   public countryName: string;
 
