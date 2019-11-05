@@ -21,7 +21,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
     UiModule,
     HttpClientModule,

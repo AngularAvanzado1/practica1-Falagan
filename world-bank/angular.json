@@ -63,6 +63,28 @@
               ],
               "serviceWorker": true,
               "ngswConfigPath": "apps/informer/ngsw-config.json"
+            },
+            "production-en": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/informer/src/environments/environment.ts",
+                  "with": "apps/informer/src/environments/environment.prod.es.ts"
+                }
+              ],
+              "outputPath": "dist/apps/informer/en/",
+              "i18nFile": "apps/informer/src/locale/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "baseHref": "en",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             }
           }
         },
@@ -99,6 +121,29 @@
             "jestConfig": "apps/informer/jest.config.js",
             "tsConfig": "apps/informer/tsconfig.spec.json",
             "setupFile": "apps/informer/src/test-setup.ts"
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/informer-server",
+            "main": "apps/informer/server.ts",
+            "tsConfig": "apps/informer/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/informer/src/environments/environment.ts",
+                  "with": "apps/informer/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            }
           }
         }
       }

@@ -9,6 +9,7 @@
     "start:pwa": "angular-http-server --open -p 8080 --path ./dist/apps/informer",
     "build": "ng build",
     "test": "ng test",
+    "i18n:informer": "ng xi18n informer --output-path src/locale",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
     "affected:apps": "nx affected:apps",
@@ -26,7 +27,11 @@
     "update:check": "ng update",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "serve:ssr": "node dist/informer-server/main.js",
+    "build:ssr": "ng build --prod && ng run informer:server:production",
+    "build:informer-en": "ng build informer --prod --configuration=production-en",
+    "start:informer-en": "npm run build:informer-en && angular-http-server --open -p 8082 --path ./dist/apps/informer/en"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +42,7 @@
     "@angular/forms": "^8.2.0",
     "@angular/platform-browser": "^8.2.0",
     "@angular/platform-browser-dynamic": "^8.2.0",
+    "@angular/platform-server": "^8.2.0",
     "@angular/pwa": "^0.803.17",
     "@angular/router": "^8.2.0",
     "@angular/service-worker": "^8.2.0",
@@ -44,9 +50,11 @@
     "@ngrx/entity": "8.3.0",
     "@ngrx/router-store": "8.3.0",
     "@ngrx/store": "8.3.0",
+    "@nguniversal/express-engine": "^9.0.0-next.6",
     "@nrwl/schematics": "^8.6.0",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "express": "^4.15.2",
     "global": "^4.4.0",
     "rxjs": "~6.4.0",
     "zone.js": "^0.9.1"
@@ -62,6 +70,7 @@
     "@nrwl/cypress": "8.6.0",
     "@nrwl/jest": "8.6.0",
     "@nrwl/workspace": "8.6.0",
+    "@types/express": "^4.17.0",
     "@types/jest": "24.0.9",
     "@types/node": "~8.9.4",
     "angular-http-server": "^1.9.0",

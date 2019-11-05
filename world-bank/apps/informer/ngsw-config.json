@@ -2,7 +2,7 @@
   "$schema": "../../node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
   "appData": {
-    "version": "2.0",
+    "version": "4.0",
     "changelog": "PWA: a better update mode"
   },
   "assetGroups": [

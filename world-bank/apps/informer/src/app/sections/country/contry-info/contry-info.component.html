@@ -1,25 +1,25 @@
 <div class="card">
   <div class="card-header text-center">
-    Informacion del País
+    <span i18n>Informacion del País</span>
   </div>
   <div class="card-body">
     <ul class="list-group">
       <li class="list-group-item">
-        <h5 class="card-title">Región</h5>
-        <p class="card-text">Nombre: {{ data.region.value }}</p>
+        <h5 class="card-title" i18n>Región</h5>
+        <p class="card-text" i18n>Nombre: {{ data.region.value }}</p>
         <p class="card-text">ID: {{ data.region.id }}</p>
         <p class="card-text">IsoCode: {{ data.region.iso2code }}</p>
       </li>
       <li class="list-group-item">
-        <h5 class="card-title">Administración</h5>
-        <p class="card-text">Nombre: {{ data.adminregion.value }}</p>
+        <h5 class="card-title" i18n>Administración</h5>
+        <p class="card-text" i18n>Nombre: {{ data.adminregion.value }}</p>
         <p class="card-text">ID: {{ data.adminregion.id }}</p>
         <p class="card-text">IsoCode: {{ data.adminregion.iso2code }}</p>
       </li>
       <li class="list-group-item">
-        <h5 class="card-title">Ingresos</h5>
+        <h5 class="card-title" i18n>Ingresos</h5>
         <p class="card-text">
-          Valor: {{ data.incomeLevel.value }} ID:
+          <span i18n>Valor: {{ data.incomeLevel.value }}</span> ID:
           {{ data.incomeLevel.id }}
           IsoCode: {{ data.incomeLevel.iso2code }}
         </p>
@@ -27,26 +27,26 @@
         <p class="card-text">IsoCode: {{ data.incomeLevel.iso2code }}</p>
       </li>
       <li class="list-group-item">
-        <h5 class="card-title">Deuda</h5>
-        <p class="card-text">Valor: {{ data.lendingType.value }}</p>
+        <h5 class="card-title" i18n>Deuda</h5>
+        <p class="card-text" i18n>Valor: {{ data.lendingType.value }}</p>
         <p class="card-text">ID: {{ data.lendingType.id }}</p>
 
         <p class="card-text">IsoCode: {{ data.lendingType.iso2code }}</p>
       </li>
       <li class="list-group-item">
-        <h5 class="card-title">Capital</h5>
+        <h5 class="card-title" i18n>Capital</h5>
         <p class="card-text">
           {{ data.capitalCity }}
         </p>
       </li>
       <li class="list-group-item">
-        <h5 class="card-title">Latitud</h5>
+        <h5 class="card-title" i18n>Latitud</h5>
         <p class="card-text">
           {{ data.longitude }}
         </p>
       </li>
       <li class="list-group-item">
-        <h5 class="card-title">Longitud</h5>
+        <h5 class="card-title" i18n>Longitud</h5>
         <p class="card-text">
           {{ data.latitude }}
         </p>
@@ -55,7 +55,7 @@
       <a
         class="btn btn-primary mt-2 float-right"
         [routerLink]="['/sections/region', data.region.id, data.region.value]"
-      >Ir a región continental</a
+        i18n >Ir a región continental</a
       >
   </div>
 </div>
