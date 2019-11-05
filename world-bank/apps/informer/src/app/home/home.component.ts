@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Region } from '@world-bank/models';
 import { Observable } from 'rxjs';
-import { WorldBankService } from '../../services/world-bank.service';
+import { WorldBankService } from '../services/world-bank.service';
 
 @Component({
   selector: 'wb-informer-home',

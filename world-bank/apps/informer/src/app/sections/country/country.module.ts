@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CountryComponent } from './country.component';
 import { RouterModule } from '@angular/router';
-import { ContryInfoComponent } from './contry-info/contry-info.component';
+import {CountryInfoComponent} from "./country-info/country-info.component";
 
 
 @NgModule({
-  declarations: [CountryComponent, ContryInfoComponent],
+  declarations: [CountryComponent, CountryInfoComponent],
   exports: [
-    ContryInfoComponent
+    CountryInfoComponent
   ],
   imports: [
     CommonModule,

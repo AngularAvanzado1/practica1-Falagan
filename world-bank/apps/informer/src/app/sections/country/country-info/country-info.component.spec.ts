@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContryInfoComponent } from './contry-info.component';
+import { CountryInfoComponent } from './country-info.component';
 
 describe('ContryInfoComponent', () => {
-  let component: ContryInfoComponent;
-  let fixture: ComponentFixture<ContryInfoComponent>;
+  let component: CountryInfoComponent;
+  let fixture: ComponentFixture<CountryInfoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContryInfoComponent ]
+      declarations: [ CountryInfoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContryInfoComponent);
+    fixture = TestBed.createComponent(CountryInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

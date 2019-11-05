@@ -27,10 +27,11 @@
               "apps/informer/src/manifest.webmanifest"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "apps/informer/src/styles.css"],
-            "scripts": [
-            ]
+              "apps/informer/src/styles.css"
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -112,7 +113,10 @@
               "apps/informer/tsconfig.app.json",
               "apps/informer/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/informer/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/informer/**"
+            ]
           }
         },
         "test": {
@@ -169,8 +173,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/informer-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/informer-e2e/**"]
+            "tsConfig": [
+              "apps/informer-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/informer-e2e/**"
+            ]
           }
         }
       }
@@ -188,7 +197,10 @@
               "libs/models/tsconfig.lib.json",
               "libs/models/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/models/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/models/**"
+            ]
           }
         },
         "test": {
@@ -213,7 +225,10 @@
               "libs/services/tsconfig.lib.json",
               "libs/services/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/services/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/services/**"
+            ]
           }
         },
         "test": {
@@ -238,7 +253,10 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui/**"
+            ]
           }
         },
         "test": {

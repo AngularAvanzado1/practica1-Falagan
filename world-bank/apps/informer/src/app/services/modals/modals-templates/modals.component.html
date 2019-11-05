@@ -1,0 +1,29 @@
+<!--TEMPLATES DE MODALES-->
+<ng-container [ngSwitch]="modalData?.template">
+    <!--MODAL ERROR GENERICO-->
+    <ng-template [ngSwitchCase]="'error'">
+      <div [@fadeout-animation] class="modal-container p-2 notification">
+        <div class="d-flex flex-row">
+          <div class="p-2">
+            <h6>
+              <strong>World-Bank App dice: </strong>
+            </h6>
+            <p>{{ modalData.msg }}</p>
+          </div>
+          <div class="p-0 ml-auto">
+            <button (click)="closeModal()" class="modal-button">X</button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <!--MODAL WAITER-->
+    <ng-template [ngSwitchCase]="'waiter'" >
+      <div class="waiter-container notification">
+        <div class="d-flex flex-row h-100 justify-content-center align-items-center">
+          <div class="p-0">
+            <mat-spinner></mat-spinner>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>

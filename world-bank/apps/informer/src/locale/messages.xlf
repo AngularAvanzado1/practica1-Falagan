@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1b7c65c8b31ce622a41f0bdc60286c239094605e" datatype="html">
+        <source>Regiones Geograficas Continentales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8fc40dd3b663ce8f0da1f9732f02d5492df5c1ba" datatype="html">
+        <source>Informacion del País</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2001d83b2da0945a77899dd2d9926bb9b8054a7b" datatype="html">
+        <source>Región</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="be420e5463a7b1a630255a4741f52a924bba116a" datatype="html">
+        <source>Nombre: <x id="INTERPOLATION" equiv-text="{{ data.region.value }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2e6f1c148b8e23fa8a5f1099deb90df2f58b3f5b" datatype="html">
+        <source>Administración</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="88b4cae19b2863590bb4f808626509c726410617" datatype="html">
+        <source>Nombre: <x id="INTERPOLATION" equiv-text="{{ data.adminregion.value }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="80e1d3651b3aa877df93d21604e2155f9fce279c" datatype="html">
+        <source>Ingresos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f543697d9bc68818a9f35d1bb7a7bab88c68d552" datatype="html">
+        <source>Valor: <x id="INTERPOLATION" equiv-text="{{ data.incomeLevel.value }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3266b3ccd7ed1242c705ce2c9d9e70b94faf08a5" datatype="html">
+        <source>Deuda</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a84e36bd2a1ad165cbeb016eb2cc41338ee415d7" datatype="html">
+        <source>Valor: <x id="INTERPOLATION" equiv-text="{{ data.lendingType.value }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="003f71b452459986ae708c66e820d5074356275a" datatype="html">
+        <source>Capital</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6d138b3e74475ed1fcdcc37133ea5918139983b6" datatype="html">
+        <source>Latitud</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7846d7b7f48e2c6d772d88ad39213913af75b3ff" datatype="html">
+        <source>Longitud</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="54ccf6f42693ad02b20857d957b6fdf24b7e532d" datatype="html">
+        <source>Ir a región continental</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/contry-info/contry-info.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0d4af2a8aecbdd7efdd78e3aa1af4c3e8ac73e9e" datatype="html">
+        <source>Region Continental de <x id="INTERPOLATION" equiv-text="{{ regionName }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/region/region.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="811c43b275cb89ecead1e141b7733bab2d355eb6" datatype="html">
+        <source>Ir a home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/region/region.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e8ef6e070045dfd54144abe93d26ca52842afd7a" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ countryName }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/country/country.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
