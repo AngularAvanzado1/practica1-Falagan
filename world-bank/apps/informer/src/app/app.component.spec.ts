@@ -2,10 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { UiModule } from '@world-bank/ui';
-import { RegionModule } from './sections/region/region.module';
-import { CountryModule } from './sections/country/country.module';
 import { HomeModule } from './home/home.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import {ModalsModule} from "./services/modals/modals-templates/modals.module";
+import {ServiceWorkerModule} from "@angular/service-worker";
 
 
 describe('GIVEN: an AppComponent declared in AppModule', () => {
@@ -16,10 +16,10 @@ describe('GIVEN: an AppComponent declared in AppModule', () => {
         imports: [
           RouterTestingModule,
           UiModule,
-          RegionModule,
-          CountryModule,
           HomeModule,
-          HttpClientTestingModule
+          ModalsModule,
+          HttpClientTestingModule,
+          ServiceWorkerModule.register('', {enabled: false})
         ]
       }).compileComponents();
     }));
