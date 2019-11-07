@@ -55,4 +55,8 @@ export class AppComponent {
         next instanceof NavigationEnd ? this._modalsService.hide(250) : undefined
     );
   }
+
+  public openSubscriptions(){
+    this._router.navigate(['sections/subscriptions']);
+  }
 }

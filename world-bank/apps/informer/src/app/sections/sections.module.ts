@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SectionsRoutingModule } from './sections-routing.module';
 import {RegionModule} from "./region/region.module";
 import {CountryModule} from "./country/country.module";
+import {SubscriptionsModule} from "./subscriptions/subscriptions.module";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {CountryModule} from "./country/country.module";
     CommonModule,
     SectionsRoutingModule,
     RegionModule,
-    CountryModule
+    CountryModule,
+    SubscriptionsModule
   ]
 })
 export class SectionsModule { }

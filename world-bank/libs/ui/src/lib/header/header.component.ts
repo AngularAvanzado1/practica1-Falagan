@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { IHeaderData } from 'libs/models/src/lib/IHeaderData';
 
 @Component({
@@ -7,8 +7,9 @@ import { IHeaderData } from 'libs/models/src/lib/IHeaderData';
   styleUrls: ['./header.component.css'
 ]})
 export class HeaderComponent implements OnInit {
-  
+
   @Input() public data:IHeaderData;
+  @Output() event = new EventEmitter();
 
   constructor() { }
 

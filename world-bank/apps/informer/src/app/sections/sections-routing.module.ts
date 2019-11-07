@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {RegionComponent} from "./region/region.component";
 import {CountryComponent} from "./country/country.component";
+import {SubscriptionsComponent} from "./subscriptions/subscriptions.component";
 
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'country/:id/:name',
     component: CountryComponent
+  },
+  {
+    path: 'subscriptions',
+    component: SubscriptionsComponent
   }
 ];
 

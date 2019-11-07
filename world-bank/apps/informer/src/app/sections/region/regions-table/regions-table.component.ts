@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ChangeDetectionStrategy,
+  EventEmitter,
+  Output
+} from '@angular/core';
+import {Country} from "@world-bank/models";
 
 @Component({
   selector: 'wb-informer-regions-table',
@@ -9,7 +17,8 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
 })
 export class RegionsTableComponent implements OnInit {
 
-  @Input() data;
+  @Input() data: Country[];
+  @Output() event = new EventEmitter();
 
   constructor() { }
 

@@ -1,9 +1,14 @@
 <div class="jumbotron jumbotron-fluid p-3">
   <div class="container">
-    <h1 class="display-4">{{ data.title }}</h1>
-    <p class="lead">
-      {{ data.subTitle}}
-    </p>
-    <p>V 2.0</p>
+    <div class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+      <div class="p-0">
+        <h1 class="display-4">{{ data.title }}</h1>
+        <p class="lead">{{ data.subTitle}}</p>
+        <p>V 2.0</p>
+      </div>
+      <div class="p-0">
+        <button class="btn btn-info" (click)="event.emit(true)">Subscripciones Activas</button>
+      </div>
+    </div>
   </div>
 </div>

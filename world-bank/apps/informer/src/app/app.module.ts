@@ -12,7 +12,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule, RouterState, routerReducer } from '@ngrx/router-store';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import {ModalsComponent} from "./services/modals/modals-templates/modals.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ModalsModule} from "./services/modals/modals-templates/modals.module";
 

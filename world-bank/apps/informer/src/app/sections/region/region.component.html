@@ -8,7 +8,7 @@
   </div>
   <div class="row p-4">
     <div class="col">
-      <wb-informer-regions-table [data]="countries$ | async">
+      <wb-informer-regions-table [data]="countries$ | async" (event)="addSubscription($event)">
       </wb-informer-regions-table>
       <a class="btn btn-primary mt-2 float-right" routerLink="/" i18n>Ir a home</a>
     </div>

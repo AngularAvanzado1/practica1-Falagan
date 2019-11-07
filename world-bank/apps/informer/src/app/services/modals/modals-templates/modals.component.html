@@ -16,6 +16,28 @@
         </div>
       </div>
     </ng-template>
+  <!--MODAL INFO GENERICO-->
+  <ng-template [ngSwitchCase]="'info'">
+    <div [@fadeout-animation]>
+      <div class="waiter-container notification">
+        <div class="d-flex flex-row h-100 justify-content-center align-items-center">
+          <div class="p-0">
+            <div class="d-flex flex-row modal-container">
+              <div class="p-2 ">
+                <h6>
+                  World-Bank App dice:
+                </h6>
+                <p>{{ modalData.msg }}</p>
+              </div>
+              <div class="p-2 ml-auto">
+                <button (click)="closeModal()" class="btn btn-info">x</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
     <!--MODAL WAITER-->
     <ng-template [ngSwitchCase]="'waiter'" >
       <div class="waiter-container notification">

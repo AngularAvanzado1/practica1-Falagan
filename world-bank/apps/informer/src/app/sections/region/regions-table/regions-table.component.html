@@ -7,6 +7,7 @@
       <th scope="col">Capital</th>
       <th scope="col">Longitud</th>
       <th scope="col">Latitud</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +20,8 @@
       <td>{{ country.capitalCity }}</td>
       <td>{{ country.longitude }}</td>
       <td>{{ country.latitude }}</td>
+      <td><button class="btn btn-info" (click)="event.emit(country)">Subscribirse
+      </button></td>
     </tr>
   </tbody>
 </table>

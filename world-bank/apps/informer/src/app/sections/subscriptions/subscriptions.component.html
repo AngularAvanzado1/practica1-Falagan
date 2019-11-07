@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row p-4">
+    <div class="col">
+      <hr/>
+      <h3 class="text-center" i18n>Subscripciones Activas</h3>
+      <hr/>
+    </div>
+  </div>
+  <div class="row p-4">
+    <div class="col">
+      <wb-informer-subscriptions-table [data]="subscriptions$ | async"
+                                       (event)="removeSubscription($event)">
+      </wb-informer-subscriptions-table>
+      <a class="btn btn-primary mt-2 float-right" routerLink="/" i18n>Ir a home</a>
+      <button class="btn btn-info mt-2  mr-2  float-right" (click)="removeAllSubscriptions()"
+         i18n>Eliminar Todas</button>
+    </div>
+  </div>
+</div>
+
